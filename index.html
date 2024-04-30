@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Practice</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9032d7dba8.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Gochi+Hand&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="drag-and-drop-background" id="background">
+        <div class="drag-and-drop-container">
+            <div class="title-container">
+                <h1>Word Rhythms</h1>
+            </div>
+            <section class="draggable-elements">
+                <i class="fa-solid fa-helicopter draggable" id="helicopter" style="color:orange" draggable="true"></i>
+                <i class="fa-solid fa-shuttle-space draggable" id="shuttle-space" style="color:darkmagenta" draggable="true"></i>
+                <i class="fa-solid fa-sailboat draggable" id="sailboat" style="color:aqua" draggable="true"></i>
+                <i class="fa-solid fa-car draggable" id="car" style="color:slateblue" draggable="true"></i>
+            </section>
+            <section class="droppable-elements">
+                <div class="droppable-container">
+                    <div class="droppable" data-draggable-id="1" data-current-element=""><span>1</span></div>
+                    <div class="label-container" data-label-id="1"></div>
+                </div>
+                <div class="droppable-container">
+                    <div class="droppable" data-draggable-id="2" data-current-element=""><span>2</span></div>
+                    <div class="label-container" data-label-id="2"></div>
+                </div>
+                <div class="droppable-container">
+                    <div class="droppable" data-draggable-id="3" data-current-element=""><span>3</span></div>
+                    <div class="label-container" data-label-id="3"></div>
+                </div>
+                <div class="droppable-container">
+                    <div class="droppable" data-draggable-id="4" data-current-element=""><span>4</span></div>
+                    <div class="label-container" data-label-id="4"></div>
+                </div>
+
+            </section>
+            <div class="controls-container">
+                <div class="btn-container">
+                    <button class="control-btn" onclick="reset()">RESET</button>
+                    <button class="control-btn" onclick="playAllSounds()">PLAY SOUNDS</button>
+                    <select name="" id="icon-selector">
+                        <option value="transportation">Transportation</option>
+                        <option value="camping">Camping</option>
+                    </select>
+                </div>
+                <div class="radio-container">
+                    <div class="radio-and-label-container">
+                        <input type="radio" name="sound-to-play" id="word-sounds" checked>
+                        <label class="radio-label" for="word-sounds">Word Sounds</label> <br> <br>
+                    </div>
+                    <div class="radio-and-label-container">
+                        <input type="radio" name="sound-to-play" id="drum-sounds">
+                        <label class="radio-label" for="drum-sounds">Drum Sounds</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================================== HOW TO PLAY ==================================== -->
+    <div class="how-to-and-about-background">
+        <div class="drag-and-drop-container">
+            <section class="how-to-play">
+                <div class="how-to-play-container">
+                    <div class="title-container">
+                        <h1>How to Play</h1>
+                    </div>
+                    <ul class="description-list">
+                        <li>Drag and drop the icons into the boxes to fill each one.</li>
+                        <li>Once all four boxes have been filled, you can play the sounds with the 'Play Sounds' button.</li>
+                        <li>You can change between drum sounds and word sounds by toggling the buttons at the bottom.</li>
+                        <li>See how each word sound translates into a drum sound!</li>
+                        <li>Change icon themes by using the dropdown menu.</li>
+                        <li>Important! Make sure to fill up all four boxes before playing the sounds.</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- ==================================== ABOUT ==================================== -->
+            <section class="about">
+                <div class="about-container">
+                    <div class="title-container">
+                        <h1>About the Game</h1>
+                    </div>
+                    <ul class="description-list">
+                        <li>Rhythm and music are all around us in our daily lives.</li>
+                        <li>A lot of our speech is dictated by a certain rhythm.</li>
+                        <li>That rhythm can be quick and speedy, or slow and thoughtful.</li>
+                        <li>It just depends on our mood and the situation we're in.</li>
+                        <li>Challenge yourself to pay special attention to the rhythm of your words.</li>
+                        <li>It may just add a little fun to your day!</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
